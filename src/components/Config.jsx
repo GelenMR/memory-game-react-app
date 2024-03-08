@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import configIcon from '../assets/configuraciones.png';
+import configIcon from './../assets/configuraciones.png';
 import { Modal } from './Modal';
 
 export const Config = () => {

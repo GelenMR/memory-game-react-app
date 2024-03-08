@@ -1,0 +1,24 @@
+import { describe, test, expect } from '@jest/globals';
+import { renderHook, waitFor } from "@testing-library/react";
+import { useFetch } from "../../src/hooks/useFetch";
+
+describe('Tests hook useFetch', () => {
+    test('should return the inicial state', () => {
+        const { result } = renderHook(() => useFetch());
+        const { images, isLoading } = result.current;
+
+        expect(images.length).toBe(0);
+        expect(isLoading).toBeTruthy();
+    });
+    test('should return an array of images and isLoading in false', async() => {
+        const { result } = renderHook(() => useFetch());
+
+        await waitFor(
+            ()=> expect(result.current.images.length).toBeGreaterThan(0)
+        );
+        const { images, isLoading } = result.current;
+
+        expect(images.length).toBeGreaterThan(0);
+        expect(isLoading).toBeFalsy();
+    });
+})

@@ -53,9 +53,13 @@ Currently, two official plugins are available:
 | pnpm lint            | analiza el código                  |
 | pnpm lint --fix      | corrige el código                  |
 
-## ⚙️ **Build and Deployment**
+## ⚙️ **Deployment**
 
-|
+To deploy this web application, Githut Pages was used.
+- To compile and generate the **dist** folder you must execute  `pnpm build`
+- You must rename the **dist** folder to **docs** and then upload the project to [GitHub](https://github.com/)
+- Once in Github, within the project, in the **Setting** tab and the option **Pages**, you must select the branch (main), the folder (docs) and press **Save** to publish.
+- The project is available at the url [memory-game-app](https://GelenMR.github.io/memory-game-react-app/)
 
 ## 🛠️ **FAQ**
 

@@ -1,4 +1,4 @@
-import reverseCard from './../../src/assets/reverseCard.png';
+import reverseCard from './../assets/reverseCard.png';
 import PropTypes from 'prop-types';
 
 export const AnimalsCard = ({ pos, title, url, state, handleShowImage }) => {
